@@ -1,0 +1,32 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return """
+    <h1>My Python Web Application</h1>
+    <p>Welcome to my web application!</p>
+    <p>This application is created using Python Flask.</p>
+    """
+
+
+@app.route("/about")
+def about():
+    return """
+    <h1>About</h1>
+    <p>This is a demo web application project.</p>
+    """
+
+
+@app.route("/contact")
+def contact():
+    return """
+    <h1>Contact</h1>
+    <p>Email: example@gmail.com</p>
+    """
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
